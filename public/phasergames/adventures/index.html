@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Bella Sara Adventures</title>
+        <link rel="icon" href="/images/favicons/favicon.ico">
+        <link rel="stylesheet" href="/styles.css">
+        <meta charset="UTF-8" />
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.js"></script>
+        <script src="./scripts/gameState.js"></script>
+        <script src="./scripts/npc.js"></script>
+        <script src="./scripts/loadScreen.js"></script>
+        <script src="./scripts/lobby.js"></script>
+        <script src="./scripts/canterFarms.js"></script>
+        <style type="text/css">
+            body { margin: 0; }
+        </style>
+    </head>
+
+    <script src="/language.js"></script>
+
+    <body style="text-align: center;" onload="loadLanguagePref(); setupUserDropdown()">
+        <script src="/header.js"></script>
+
+        <div id="gameDiv" style="padding-top: 10px; padding-bottom: 10px;">
+            <script type="text/javascript">
+                const config = {
+                    parent: "gameDiv",
+                    type: Phaser.CANVAS,
+                    width: 886,
+                    height: 520,
+                    backgroundColor: '#3a7d44',
+                    scene: [Load, Lobby, CanterFarms],
+                    dom: {
+                        createContainer: true
+                    }
+                };
+
+                const game = new Phaser.Game(config);
+            </script>
+        </div>
+
+        <div id="footer" class="footer">
+            <script src="/footer.js"></script>
+            <script>
+                generateFooter({
+                    wikiLink: 'https://bellasara.wiki.gg/wiki/Bella_Sara_Adventures',
+                    githubLink: 'https://github.com/draessld/sarabella.neocities.org/tree/main/public/phasergames/adventures'
+                });
+            </script>
+        </div>
+
+        <script src="/flags.js"></script>
+        <script src="/userManager.js"></script>
+    </body>
+</html>

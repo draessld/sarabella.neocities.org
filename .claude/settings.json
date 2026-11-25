@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat /home/draesdom/Documents/claude_projects/sarabella.neocities.org/.github/workflows/*.yml)",
+      "WebFetch(domain:bellasara.wiki.gg)"
+    ]
+  }
+}
